@@ -693,8 +693,13 @@ page span {
     margin: 5px;
     line-height: 18px;
 }
-.page-comp-form input{
-    font-size: 12px;
+.page-comp-form input {
+    font-size: 11px;
+    padding: 2px;
+}
+.page-comp-form input {
+    border: 1px solid #a0a0a0;
+    color: #3d3d3d;
 }
 .attr-marg{
     display: none;
