@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUMA</title>
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="googlebot" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-git.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		 <span class="logo-cli">Publisher</span>
+		<!--<span class="userName">Daniel Forbes <img src="img/profile-pic.png"></span> -->
+		<span class="nav-btn-right">Debug <i class="fas fa-caret-down"></i></span>
+		<span class="nav-btn-right pd-dash">PD Dashboard</span>
+		<span class="nav-btn-right"><i class="fas fa-question-circle"></i></span>
+	</div>
+	<div class="searchBar">
+		<input type="text" placeholder="Filter...">
+		<i class="fas fa-search"></i>
+		<i class="fas fa-folder"></i>
+				<span class="sort"><a><i class="fas fa-sort-amount-down"></i></a>
+					<div class="sort-dropdown">
+						    <ul>
+						        <li><strong>Sort by...</strong></li>
+						        <hr>
+						        <li>Name</li>
+						        <li>Recently Used</li>
+						        <li>Recently Changed</li>
+						        <li>Recently Recalculated</li>
+						        <li>Recently Downloaded</li>
+						        <li>Downloadable</li>
+						        <li>Recalculated Today</li>
+						    </ul>
+					</div> 
+				</span>
+		
+		<i class="fas fa-th-large"></i>
+
+	</div>
+	
+	<div class="container">
+		<div class="folder-col" id="sortable">
+			<div class="row-head top-none">Directories</div>
+				<div class="row-titles"><span class="list-col-folder"><i class="fas fa-sort-amount-down"></i>Name</span><i class="fas fa-folder"></i></div>
+				<div class="files-col">
+					<ul>
+						<li class="folder-row">
+							<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> All Documents <span class="right">845</span></div>
+								<ul>
+									<li class="folder-row">
+										<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> Client <span class="right">19</span></div>
+										<ul>
+											<li class="folder-row">
+												<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> fds_demo_eur <span class="right">19</span></div>
+												<ul>
+													<li class="folder-row">
+														<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> Publisher MGR <span class="right">45</span></div>
+														<ul>
+															<li class="folder-row">
+																<div class="line"><i class="fas fa-chevron-right"></i><i class="fas fa-folder"></i> Samples <span class="right">388</span></div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+						
+						<ul>
+							<li class="folder-row">
+								<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> SuperClient <span class="right">217</span></div>
+								<ul>
+									<li class="folder-row">
+										<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> fds_demo_va_sc <span class="right">32</span></div>
+										<ul>
+											<li class="folder-row">
+												<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> portfolio_analytics_group <span class="right">12</span></div>
+												<ul>
+													<li class="folder-row">
+														<div class="line"><i class="fas fa-chevron-right"></i><i class="fas fa-folder"></i> Publisher <span class="right">21</span></div>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+						<ul>
+							<li class="folder-row">
+								<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> Personal <span class="right">45</span></div>
+								<ul>
+									<li class="folder-row">
+										<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> fds_demo_eur <span class="right">22</span></div>
+										<ul>
+											<li class="folder-row">
+												<div class="line"><i class="fas fa-chevron-down"></i><i class="fas fa-folder"></i> 652592 <span class="right">25</span></div>
+											</li>
+										</ul>
+									</li>
+								</ul>	
+							</li>
+						</li>	
+					</ul>
+
+				</div>
+		</div>
+		<div class="sub-cont sub-container-full">
+			<div class="group favourites">
+				<div class="row-head top-none"><i class="fas fa-sort-amount-down"></i> Favourites</div>
+				<div class="row-titles"><span class="list-col-1"><i class="fas fa-sort-amount-down"></i>Name</span><span class="list-col-2"><i class="fas fa-sort-amount-down"></i>Date</span><span class="list-col-3"><i class="fas fa-sort-amount-down"></i>File Type</span></div>
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star starOn"></i> Forbes</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test2.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star starOn"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-powerpoint ppt-type"></i><span class="img-text">PowerPoint</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test3.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star starOn"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-alt csv-type"></i><span class="img-text">CSV</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test4.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star starOn"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test5.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star starOn"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+			</div>
+			<div class="group recently">
+				<div class="row-head"><i class="fas fa-sort-amount-down"></i> Recently Used</div>
+					<div class="recently-dropdown">
+						    <ul>
+						        <li><strong>Sort by...</strong></li>
+						        <hr>
+						        <li>Name</li>
+						        <li>Recently Used</li>
+						        <li>Recently Changed</li>
+						        <li>Recently Recalculated</li>
+						        <li>Recently Downloaded</li>
+						        <li>Downloadable</li>
+						        <li>Recalculated Today</li>
+						    </ul>
+					</div> 
+				<div class="row-titles"><span class="list-col-1"><i class="fas fa-sort-amount-down"></i>Name</span><span class="list-col-2"><i class="fas fa-sort-amount-down"></i>Date</span><span class="list-col-3"><i class="fas fa-sort-amount-down"></i>File Type</span></div>
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test6.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test7.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-powerpoint ppt-type"></i><span class="img-text">PowerPoint</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test8.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-alt csv-type"></i><span class="img-text">CSV</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test9.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test10.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-powerpoint ppt-type"></i><span class="img-text">PowerPoint</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+			</div>
+
+
+			<div class="group all">
+				<div class="row-head"><i class="fas fa-sort-amount-down"></i> All (845)</div>
+				<div class="row-titles"><span class="list-col-1"><i class="fas fa-sort-amount-down"></i>Name</span><span class="list-col-2"><i class="fas fa-sort-amount-down"></i>Date</span><span class="list-col-3"><i class="fas fa-sort-amount-down"></i>File Type</span></div>
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Dan</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test2.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test3.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test4.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-powerpoint ppt-type"></i><span class="img-text">PowerPoint</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test5.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-powerpoint ppt-type"></i><span class="img-text">PowerPoint</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test6.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-alt csv-type"></i><span class="img-text">CSV</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test7.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test8.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test9.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-powerpoint ppt-type"></i><span class="img-text">PowerPoint</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test10.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-alt csv-type"></i><span class="img-text">CSV</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test2.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				<!-- ITEM -->
+				<div class="row2 sortable-row">
+					<div class="thumbnail">
+						<img src="img/img-test5.jpg" class="thumb">
+					</div>
+					<div class="details">
+						<span class="list-col-1 cname"><i class="fas fa-star"></i> Global Colection Report</span>
+						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
+						<span class="list-col-3 cfile"><i class="fas fa-cogs right"></i><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
+					</div>
+				</div>
+				<!-- END ITEM -->
+				
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script>
+
+//Search buttons
+$('.searchBar .fa-folder').click(function(){
+	$('.folder-col').toggle();
+	$('.sub-cont').toggleClass('sub-container-full sub-container');
+})
+$('.searchBar .sort').click(function(){
+	$('.sort-dropdown').toggle();
+})
+
+
+$('.searchBar .fa-th-large').click(function(){
+	$('.sortable-row').toggleClass('row row2');
+	$('.sub-cont .row-titles').toggle();
+})
+//UPDATE TILE LIST BUTTON
+$('.fa-th-large').click(function(){
+	$(this).toggleClass('fa-bars fa-th-large');
+})
+//Hide sorting on thumbnails
+$('.sub-cont .row-titles').hide();
+
+
+$('.pd-dash').on('click', function(){
+	$(location).attr('href','file:///C:/Puma/Web-%20Template/index.html');
+})
+
+
+//Make Favourite Un-favourite
+$('.favourites .starOn').on('click', function(){
+	$(this).toggleClass('starOn');
+	$(this).parent().parent().parent().clone().appendTo( $( ".all" ) );
+	$(this).parent().parent().parent().hide();
+});
+
+$('.all .fa-star, .recently .fa-star').on('click', function(){
+	$(this).addClass('starOn');
+	$(this).parent().parent().parent().clone().appendTo( $( ".favourites" ) );
+	$(this).parent().parent().parent().hide();
+		//$('.all').append($(".favourite:not(.starOn)").unwrap());
+});
+
+
+
+//Allow drag drod sorting tree
+$( function() {
+    $( "#sortable ul li, .sortable-row" ).parent().sortable({
+    	   	connectWith: ".favourites",
+    	   	cancel: ".row-titles, .row-head",
+    	   	cursor: "move"
+    });
+    $( "#sortable, .sortable-row, .row-titles" ).disableSelection();
+
+  });
+
+
+
+
+
+
+//Ajust images to thumbnails 
+$(document).ready(function() {
+  var imgs = $('.thumb');
+  imgs.each(function(){
+    var img = $(this);
+    var width = img.width();
+    var height = img.height();
+    if(width > height){
+        img.addClass('landscape');
+    }
+  })
+});
+
+
+
+
+
+
+//On load gerarquise tree
+$('.folder-row ul li div').css({'padding-left':'30px'})
+$('.folder-row ul ul li div').css({'padding-left':'50px'})
+$('.folder-row ul ul ul li div').css({'padding-left':'70px'})
+$('.folder-row ul ul ul ul li div').css({'padding-left':'90px'})
+$('.folder-row ul ul ul ul ul li div').css({'padding-left':'110px'})
+//Style Tree dinamically
+//$('ul ul .line').hide();  //Only display main path
+$('li ul .line').click(function() {
+    $(this).closest('ul').find('.folder-row ul').slideToggle();
+});
+
+</script>	
+</html>
