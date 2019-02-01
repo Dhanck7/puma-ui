@@ -336,7 +336,9 @@ ul .line:hover {
 .list-col-5{
     width:24%;
     float:left;
+    white-space: nowrap;
 }
+
 .row-titles .list-col-1 {
     width: 39%;
 }

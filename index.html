@@ -25,7 +25,7 @@
 	</div>
 	<div class="searchBar">
 		<span class="filters">
-			Filter: <span class="filter-btn sc-common">Common</span><span class="filter-btn sc-publish">Published</span><span class="filter-btn sc-draft">Draft</span><span class="filter-btn sc-bridge">Bridge</span><span class="filter-btn sc-locfav">Locked</span><span class="filter-btn sc-locfav">Favourites</span>
+			Filter: <span class="filter-btn sc-common">Common</span><span class="filter-btn sc-bridge">Bridge</span><span class="filter-btn sc-publish">Published</span><span class="filter-btn sc-draft">Draft</span><span class="filter-btn sc-locfav">Locked</span><span class="filter-btn sc-locfav">Favourites</span>
 		</span>
 		<input type="text" placeholder="Filter..." id="search">
 		<i class="fas fa-search"></i>
@@ -120,8 +120,9 @@
 			<div class="group favourites">
 				<div class="row-head top-none"><i class="fas fa-sort-amount-down"></i> Favourites</div>
 				<div class="row-titles"><span class="list-col-1"><i class="fas fa-sort-amount-down"></i>Name</span><span class="list-col-2"><i class="fas fa-sort-amount-down"></i>Modified</span><span class="list-col-3"><i class="fas fa-sort-amount-down"></i>Path</span><span class="list-col-4"><i class="fas fa-sort-amount-down"></i>File Type</span><span class="list-col-5"><i class="fas fa-sort-amount-down"></i>Lock</span></div>
+
 				<!-- ITEM -->
-				<div class="row sortable-row">
+				<div class="row sortable-row" data-type="common" data-state="published" data-date="07 Dec 2017 09:59">
 					<div class="thumbnail">
 						<img src="img/img-test.jpg" class="thumb">
 					</div>
@@ -130,12 +131,15 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span><span class="common right sc-draft">D</span> --><span class="common right sc-publish">P</span> </span>
+						<span class="list-col-5">
+							<span class="list-col-5"><i class="fas fa-lock"></i>  John Doe</span>
+							<span class="common right sc-publish col-4">P</span> 
+						</span>
 					</div>
 				</div>
 				<!-- END ITEM -->
 				<!-- ITEM -->
-				<div class="row sortable-row">
+				<div class="row sortable-row" data-type="common" data-state="published" data-date="07 Dec 2017 09:59">
 					<div class="thumbnail">
 						<img src="img/img-test2.jpg" class="thumb">
 					</div>
@@ -149,7 +153,7 @@
 				</div>
 				<!-- END ITEM -->
 				<!-- ITEM -->
-				<div class="row sortable-row">
+				<div class="row sortable-row" data-type="draft" data-state="published draft" data-date="07 Dec 2017 09:59">
 					<div class="thumbnail">
 						<img src="img/img-test3.jpg" class="thumb">
 					</div>
@@ -163,7 +167,7 @@
 				</div>
 				<!-- END ITEM -->
 				<!-- ITEM -->
-				<div class="row sortable-row">
+				<div class="row sortable-row" data-type="draft" data-date="07 Dec 2017 09:59">
 					<div class="thumbnail">
 						<img src="img/img-test4.jpg" class="thumb">
 					</div>
@@ -172,12 +176,11 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
 				<!-- ITEM -->
-				<div class="row sortable-row">
+				<div class="row sortable-row" data-type="bridge" data-date="07 Dec 2017 09:59">
 					<div class="thumbnail">
 						<img src="img/img-test5.jpg" class="thumb">
 					</div>
@@ -186,7 +189,10 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><!-- <span class="common right sc-draft">D</span> --><span class="common right sc-publish">P</span> </span>
+						<span class="list-col-5">
+								<span class="list-col-5"><i class="fas fa-lock"></i>  John Doe</span>
+								<span class="common right sc-publish col-4">P</span> 
+							</span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -217,7 +223,6 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -231,12 +236,12 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span>
+						<!-- <span class="list-col-5 clock">FDS_Demo_EUR <span class="common right sc-bridge">B</span><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span> -->
 					</div>
 				</div>
 				<!-- END ITEM -->
 				<!-- ITEM -->
-				<div class="row sortable-row">
+				<div class="row sortable-row" data-type="common" data-date="07 Dec 2017 09:59">
 					<div class="thumbnail">
 						<img src="img/img-test8.jpg" class="thumb">
 					</div>
@@ -245,7 +250,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span>
+						<!-- <span class="list-col-5 clock">FDS_Demo_EUR <span class="common right sc-bridge">B</span><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span> -->
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -259,7 +264,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span>
+						<!-- <span class="list-col-5 clock">FDS_Demo_EUR <span class="common right sc-bridge">B</span><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span> -->
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -273,7 +278,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span>
+						<!-- <span class="list-col-5 clock">FDS_Demo_EUR <span class="common right sc-bridge">B</span><span class="common right sc-publish">P</span> <span class="common right sc-draft">D</span></span> -->
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -293,7 +298,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -307,7 +312,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"><!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -321,7 +326,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -335,7 +340,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -349,7 +354,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -363,7 +368,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -377,7 +382,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -391,7 +396,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span><span class="common right sc-draft">D</span></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span><span class="common right sc-draft">D</span></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -405,7 +410,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"><!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -419,7 +424,10 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5">
+								<span class="list-col-5"><i class="fas fa-lock"></i>  John Doe</span>
+								<span class="common right sc-publish col-4">P</span> 
+						</span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -433,7 +441,7 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5 clock"> <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -447,7 +455,10 @@
 						<span class="list-col-2 cdate">07 Dec 2017 09:59PM</span>
 						<span class="list-col-3 cpath">/c/fds_demo_eur/</span>
 						<span class="list-col-4 cfile"><i class="fas fa-file-pdf pdf-type"></i><span class="img-text">PDF</span></span>
-						<span class="list-col-5 clock">FDS_Demo_EUR <!-- <span class="common right sc-bridge">B</span> --><span class="common right sc-publish">P</span> <!-- <span class="common right sc-draft">D</span> --></span>
+						<span class="list-col-5">
+								<span class="list-col-5"><i class="fas fa-lock"></i>  John Doe</span>
+								<span class="common right sc-publish col-4">P</span> 
+						</span>
 					</div>
 				</div>
 				<!-- END ITEM -->
@@ -513,10 +524,13 @@ $( function() {
 
 //Click on row expand
 $('.row').on('click', function(){
+	// if ($( this ).hasClass("expand-row")){
+	// 	$(this).remove();
+	//} else {
 	$('.expand-row').remove();
 	$(this).after('<div class="expand-row"><img src="img/row-thumb.jpg" class="row-img"><div class="center-row"><span class="row-comp-tit">Components on published version <i class="fas fa-sync-alt right"></i></span><span class="row-comp-info"><span class="row-comp-subtit">PA3 documents (1)</span><span class="row-comp-text">Portfolio Snapshot - Equity</span><span class="row-comp-subtit">Components (19)</span><span class="row-comp-text">Characteristics_table<br>Top Bottom Contributors_table<br>Attribution_table<br>Attribution Over Time_chart<br>Composition<br>Sector Weights PieChart<br>Active Weights BarChart<br>Top 10 Positions<br>Multi Horizon Returns Chart<br>Perf Summary1<br>Perf Summary1_1<br>Total Effect chart<br>Total Effect chart_1<br>Weights Horizontal Bar Chart<br>Weights Horizontal Bar<br>Selection_chart<br>Total Effect 2_chart<br>Active Contributors_table<br>Attrib Over Time Chart</span></span></div><span class="row-btn-group"><span class="row-btn"><i class="fas fa-database"></i> Data Inspector</span><span class="row-btn"><i class="fas fa-ban"></i> Discard Draft</span><span class="row-btn"><i class="fas fa-cloud-upload-alt"></i> Publish Draft</span><a href="pd-open-rep.html" class="row-btn-a"><span class="row-btn"><i class="fas fa-globe"></i> Open Publish</span></a></span></div>');
+	//}
 });
-
 
 
 
@@ -578,10 +592,73 @@ $(document).ready(function(){
 
 
 
-//Filter rows 
-$('.filter-btn.sc-common').on('click', function(){
-	$(".sortable-row .details .cname .right[class!='common']").parent().parent().parent().hide();
-})
+
+
+//Define your buttons filters
+$filterBtn1 = 'common';
+$filterBtn2 = 'bridge';
+$filterBtn3 = 'draft';
+$filterBtn4 = 'publish';
+// $filterBtn5 = 'locked';
+// $filterBtn6 = 'favourites';
+
+//Define your buttons filters
+$BtnDef = '.filters .sc-'
+$Btn1 = $BtnDef+$filterBtn1;
+$Btn2 = $BtnDef+$filterBtn2;
+$Btn3 = $BtnDef+$filterBtn3;
+$Btn4 = $BtnDef+$filterBtn4;
+// $Btn5 = $BtnDef+'locfav';
+// $Btn6 = $BtnDef+'locfav';
+
+
+//Common Button
+$($Btn1).on('click', function(){
+	//alert('btn1 clicked');
+  if ( $('.sortable-row').attr('data-type') === $filterBtn1 ) {
+  	$("[data-type=common]").toggle();
+	}
+});
+$($Btn2).on('click', function(){
+	//alert('btn1 clicked');
+  if ( $('.sortable-row').attr('data-type') === $filterBtn2 ) {
+  	$("[data-type=bridge]").toggle();
+	}
+});
+// //Bridge Button
+// $($Btn2).on('click', function(){
+// 	//alert('btn2 clicked');
+//   if ( $('.sortable-row').attr('data-type') == $filterBtn2 ) {
+//     $( ".sortable-row[data-type*="+ $filterBtn2 +"]" ).show();
+//     //$( ".sortable-row[data-type!="+ $filterBtn2 +"]" ).toggle();
+// 	}else{
+// 		$( ".sortable-row[data-type*="+ $filterBtn2 +"]" ).hide();
+// 	}
+// });
+// //Draft Button
+// $($Btn3).on('click', function(){
+// 	//alert('btn3 clicked');
+//   if ( $('.sortable-row').attr('data-state') == $filterBtn3 ) {
+//     $( ".sortable-row[data-state*="+ $filterBtn3 +"]" ).show();
+//     $( ".sortable-row[data-state!="+ $filterBtn3 +"]" ).toggle();
+// 	}else{
+
+// 	}
+// });
+// //Published Button
+// $($Btn4).on('click', function(){
+// 	//alert('btn4 clicked');
+//   if ( $('.sortable-row').attr('data-state') == $filterBtn4 ) {
+//     $( ".sortable-row[data-state*="+ $filterBtn4 +"]" ).show();
+//     $( ".sortable-row[data-state!="+ $filterBtn4 +"]" ).toggle();
+// 	}else{
+
+// 	}
+// });
+
+
+
+
 
 
 
